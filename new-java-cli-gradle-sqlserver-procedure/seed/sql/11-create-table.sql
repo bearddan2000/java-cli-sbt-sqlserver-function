@@ -1,0 +1,9 @@
+CREATE TABLE audit (
+	id INT IDENTITY(1,1) PRIMARY KEY,
+	loggedin_user VARCHAR(100) NOT NULL,
+	changed DATETIME NULL,
+	actionId INT NOT NULL,
+	tblId INT NOT NULL,
+	old_val VARCHAR(255) DEFAULT NULL,
+	new_val VARCHAR(255) DEFAULT NULL
+);
